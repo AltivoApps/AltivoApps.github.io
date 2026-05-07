@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html class="dark" lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Polityka Prywatności - MediPlan</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(30, 31, 38, 0.6); /* surface-container with 60% opacity */
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-gradient {
+            /* Adjusted to fit MediPlan's teal/green theme, but still dark */
+            background: radial-gradient(circle at 50% 50%, rgba(0, 71, 141, 0.15) 0%, rgba(17, 19, 25, 0) 70%);
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      // Adapting to blue theme based on user's original Tailwind config
+                      "primary": "#a9c7ff", // Light blue
+                      "on-primary": "#003063", // Dark blue text on primary
+                      "primary-container": "#00478d", // Darker blue container
+                      "on-primary-container": "#8eb8ff", // Lighter blue text on primary container
+
+                      "secondary": "#8eb8ff", // Using a lighter blue for secondary accent
+                      "on-secondary": "#003063", // Dark blue text on secondary
+                      "secondary-container": "#00478d", // Using primary-container for secondary-container
+                      "on-secondary-container": "#a9c7ff", // Using primary for on-secondary-container
+
+                      "tertiary": "#a9c7ff", // Using primary for tertiary
+                      "on-tertiary": "#003063", // Using on-primary for on-tertiary
+                      "tertiary-container": "#00478d", // Using primary-container for tertiary-container
+                      "on-tertiary-container": "#8eb8ff", // Using on-primary-container for on-tertiary-container
+
+                      "error": "#FFB4AB", // Standard error color
+                      "on-error": "#690005",
+                      "error-container": "#93000A",
+                      "on-error-container": "#FFDAD6",
+
+                      "background": "#111319",
+                      "on-background": "#E2E2EB",
+
+                      "surface": "#111319",
+                      "on-surface": "#E2E2EB",
+                      "surface-dim": "#111319",
+                      "surface-bright": "#373940",
+                      "surface-container-lowest": "#0C0E14",
+                      "surface-container-low": "#191B22",
+                      "surface-container": "#1E1F26",
+                      "surface-container-high": "#282A30",
+                      "surface-container-highest": "#33343B",
+
+                      "outline": "#8C919C",
+                      "outline-variant": "#424751",
+
+                      "inverse-surface": "#E2E2EB",
+                      "inverse-on-surface": "#2E3037",
+                      "inverse-primary": "#295EA5",
+
+                      // Fixed colors (if needed, otherwise can remove)
+                      "primary-fixed": "#D6E3FF",
+                      "primary-fixed-dim": "#A9C7FF",
+                      "on-primary-fixed": "#001B3D",
+                      "on-primary-fixed-variant": "#00468B",
+                      "secondary-fixed": "#8eb8ff", // Lighter blue
+                      "secondary-fixed-dim": "#a9c7ff", // Primary blue
+                      "on-secondary-fixed": "#003063", // Dark blue
+                      "on-secondary-fixed-variant": "#00468b", // Darker blue
+                      "tertiary-fixed": "#D6E3FF",
+                      "tertiary-fixed-dim": "#A9C7FF",
+                      "on-tertiary-fixed": "#001B3D",
+                      "on-tertiary-fixed-variant": "#00468C",
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "2xl": "16px",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "lg": "24px",
+                      "sm": "8px",
+                      "grid-gutter": "16px",
+                      "md": "16px",
+                      "xs": "4px",
+                      "base": "4px",
+                      "xl": "32px"
+              },
+              "fontFamily": {
+                      "label-md": ["Inter"],
+                      "body-md": ["Inter"],
+                      "display-lg": ["Manrope"],
+                      "body-lg": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "headline-lg": ["Manrope"],
+                      "headline-md": ["Manrope"]
+              },
+              "fontSize": {
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary/30">
+<main class="pt-12 pb-20 px-4 md:px-lg max-w-7xl mx-auto min-h-screen">
+    <!-- Hero Section -->
+    <section class="hero-gradient relative py-12 mb-12 rounded-2xl overflow-hidden border border-white/5">
+        <div class="relative z-10 text-center px-6">
+            <h1 class="font-display-lg text-display-lg mb-4 text-primary">Polityka Prywatności</h1>
+            <p class="text-on-surface-variant max-w-2xl mx-auto font-body-lg text-body-lg">
+                Twoje zdrowie to sprawa prywatna. Dowiedz się, w jaki sposób chronimy Twoje dane medyczne i zapewniamy bezpieczeństwo Twoich informacji w MediPlan.
+            </p>
+            <div class="mt-8 flex justify-center">
+                <div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center overflow-hidden border border-white/10">
+                    <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+        <!-- Sidebar Navigation (Desktop) -->
+        <aside class="hidden lg:block lg:col-span-3 h-fit sticky top-24">
+            <nav class="glass-card rounded-2xl p-md">
+                <h3 class="text-label-sm font-label-sm uppercase tracking-widest text-outline mb-4 px-3">Spis treści</h3>
+                <ul class="space-y-1">
+                    <li><a class="block px-3 py-2 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-white/5 transition-colors" href="#wstep">Wstęp</a></li>
+                    <li><a class="block px-3 py-2 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-white/5 transition-colors" href="#przechowywanie-danych">Przechowywanie Danych</a></li>
+                    <li><a class="block px-3 py-2 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-white/5 transition-colors" href="#kopia-zapasowa">Kopia Zapasowa</a></li>
+                    <li><a class="block px-3 py-2 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-white/5 transition-colors" href="#diagnostyka-bledy">Diagnostyka i Błędy</a></li>
+                    <li><a class="block px-3 py-2 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-white/5 transition-colors" href="#wymagane-uprawnienia">Wymagane Uprawnienia</a></li>
+                    <li><a class="block px-3 py-2 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-white/5 transition-colors" href="#usuniecie-danych">Usunięcie Danych</a></li>
+                    <li><a class="block px-3 py-2 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-white/5 transition-colors" href="#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Sections -->
+        <div class="lg:col-span-9 space-y-md">
+
+            <!-- Section: Wstęp -->
+            <article class="glass-card rounded-2xl p-lg" id="wstep">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-2xl">info</span>
+                    </div>
+                    <h2 class="font-headline-lg text-headline-lg">Wstęp</h2>
+                </div>
+                <div class="space-y-4 text-on-surface-variant">
+                    <p>Aplikacja <strong>MediPlan</strong> została stworzona z myślą o bezpieczeństwie i komforcie pacjenta. Niniejsza polityka prywatności wyjaśnia, w jaki sposób traktujemy Twoje dane. Najważniejsza informacja: <strong>Twoje dane medyczne należą do Ciebie i nigdy nie opuszczają Twojego urządzenia bez Twojej wiedzy.</strong></p>
+                </div>
+            </article>
+
+            <!-- Section: Przechowywanie Danych -->
+            <article class="glass-card rounded-2xl p-lg" id="przechowywanie-danych">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-2xl">storage</span>
+                    </div>
+                    <h2 class="font-headline-lg text-headline-lg">Przechowywanie Danych</h2>
+                </div>
+                <div class="space-y-4 text-on-surface-variant">
+                    <div class="p-4 rounded-xl bg-surface-container border border-white/5">
+                        <h4 class="text-primary font-bold mb-2">Lokalne przechowywanie</h4>
+                        <p class="text-sm">Wszystkie wprowadzone informacje (nazwy leków, harmonogramy, zdjęcia dawek) są przechowywane <strong>wyłącznie lokalnie</strong> w pamięci Twojego telefonu w bezpiecznej bazie danych SQLite.</p>
+                    </div>
+                    <p>Nie posiadamy serwerów centralnych, na które przesyłane byłyby Twoje dane medyczne. Oznacza to, że nikt poza Tobą nie ma dostępu do Twojej listy leków.</p>
+                </div>
+            </article>
+
+            <!-- Section: Kopia Zapasowa -->
+            <article class="glass-card rounded-2xl p-lg" id="kopia-zapasowa">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center">
+                        <span class="material-symbols-outlined text-secondary text-2xl">backup</span>
+                    </div>
+                    <h2 class="font-headline-lg text-headline-lg">Kopia Zapasowa</h2>
+                </div>
+                <div class="space-y-4 text-on-surface-variant">
+                    <p>Ponieważ dane są przechowywane lokalnie, za ich bezpieczeństwo odpowiadasz Ty. Aplikacja udostępnia funkcję <strong>Eksportu</strong>, która pozwala stworzyć zaszyfrowane archiwum ZIP z bazą danych i zdjęciami. Zalecamy regularne zapisywanie kopii w bezpiecznym miejscu (np. na dysku chmurowym).</p>
+                </div>
+            </article>
+
+            <!-- Section: Diagnostyka i Błędy -->
+            <article class="glass-card rounded-2xl p-lg" id="diagnostyka-bledy">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-tertiary-container flex items-center justify-center">
+                        <span class="material-symbols-outlined text-tertiary text-2xl">bug_report</span>
+                    </div>
+                    <h2 class="font-headline-lg text-headline-lg">Diagnostyka i Błędy</h2>
+                </div>
+                <div class="space-y-4 text-on-surface-variant">
+                    <p>W celu zapewnienia stabilności, MediPlan korzysta z usługi <strong>Firebase Crashlytics (Google)</strong>. W przypadku awarii aplikacji, przesyłany jest anonimowy raport techniczny. Raport ten zawiera informacje o modelu telefonu i systemie operacyjnym, ale <strong>nie zawiera</strong> nazw Twoich leków ani żadnych danych osobowych.</p>
+                </div>
+            </article>
+
+            <!-- Section: Wymagane Uprawnienia -->
+            <article class="glass-card rounded-2xl p-lg" id="wymagane-uprawnienia">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-2xl">lock_open</span>
+                    </div>
+                    <h2 class="font-headline-lg text-headline-lg">Wymagane Uprawnienia</h2>
+                </div>
+                <div class="space-y-4 text-on-surface-variant">
+                    <ul class="list-none space-y-4 mt-5">
+                        <li class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-primary mt-1">notifications</span>
+                            <span><strong>Powiadomienia:</strong> Służą wyłącznie do przypominania o zaplanowanych dawkach leków.</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-primary mt-1">camera_alt</span>
+                            <span><strong>Aparat:</strong> Umożliwia zrobienie zdjęcia opakowania leku dla łatwiejszej identyfikacji.</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-primary mt-1">folder_open</span>
+                            <span><strong>Pliki / Pamięć:</strong> Wymagane wyłącznie do zapisu i odczytu kopii zapasowej danych.</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-primary mt-1">battery_charging_full</span>
+                            <span><strong>Działanie w tle:</strong> Wymagane do precyzyjnego wyzwalania alarmów o lekach.</span>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Section: Usunięcie Danych -->
+            <article class="glass-card rounded-2xl p-lg" id="usuniecie-danych">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center">
+                        <span class="material-symbols-outlined text-secondary text-2xl">delete_forever</span>
+                    </div>
+                    <h2 class="font-headline-lg text-headline-lg">Usunięcie Danych</h2>
+                </div>
+                <div class="space-y-4 text-on-surface-variant">
+                    <p>Odinstalowanie aplikacji MediPlan skutkuje <strong>trwałym usunięciem</strong> wszystkich zgromadzonych w niej danych z Twojego urządzenia.</p>
+                </div>
+            </article>
+
+            <!-- Section: Kontakt -->
+            <article class="glass-card rounded-2xl p-lg" id="kontakt">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center">
+                        <span class="material-symbols-outlined text-outline text-2xl">mail</span>
+                    </div>
+                    <h2 class="font-headline-lg text-headline-lg">Kontakt</h2>
+                </div>
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="flex-1 space-y-4">
+                        <p class="text-on-surface-variant">Masz pytania lub sugestie? Napisz do nas:</p>
+                        <a class="inline-flex items-center gap-2 text-primary font-bold hover:underline" href="mailto:support@mediplan.app">
+                            support@mediplan.app
+                            <span class="material-symbols-outlined text-sm">arrow_outward</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+                <p class="text-sm text-outline mt-2">
+                Ostatnia aktualizacja: 2026
+                </p>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-white/5 py-12 px-4">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-xl">
+        <div class="col-span-1 md:col-span-2">
+            <span class="text-2xl font-black tracking-tight text-slate-100 font-manrope">MediPlan</span>
+            <p class="mt-4 text-on-surface-variant max-w-sm">Inteligentne przypomnienia o lekach, zaprojektowane z myślą o Twoim bezpieczeństwie i komforcie.</p>
+        </div>
+        <div>
+            <h4 class="font-bold text-on-surface mb-4">Aplikacja</h4>
+            <ul class="space-y-2 text-on-surface-variant text-sm">
+                <li><a class="hover:text-primary transition-colors" href="#">Pobierz na Android</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-bold text-on-surface mb-4">Prawne</h4>
+            <ul class="space-y-2 text-on-surface-variant text-sm">
+                <li><a class="text-primary font-bold" href="#">Polityka Prywatności</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-outline">© 2026 MediPlan. Wszystkie prawa zastrzeżone.</p>
+        <p class="text-xs text-outline">Wykonano z pasją dla zdrowia.</p>
+    </div>
+</footer>
+</body>
+</html>
