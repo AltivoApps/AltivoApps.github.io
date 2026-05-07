@@ -6,109 +6,155 @@
     <title>MediPlan – Inteligentne przypomnienia o lekach</title>
 
     <link rel="icon" type="image/png" href="App-icon.png">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #111319;
-            color: #E2E2EB;
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(30, 31, 38, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         .hero-gradient {
-            background: radial-gradient(circle at 50% 50%, rgba(0, 71, 141, 0.25) 0%, rgba(17, 19, 25, 0) 70%);
+            background: radial-gradient(circle at 50% 50%, rgba(0, 71, 141, 0.15) 0%, rgba(17, 19, 25, 0) 70%);
         }
     </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#a9c7ff",
+                      "on-primary": "#003063",
+                      "primary-container": "#00478d",
+                      "on-primary-container": "#8eb8ff",
+                      "secondary": "#8eb8ff",
+                      "on-secondary": "#003063",
+                      "secondary-container": "#00478d",
+                      "on-secondary-container": "#a9c7ff",
+                      "background": "#111319",
+                      "on-background": "#E2E2EB",
+                      "surface": "#111319",
+                      "on-surface": "#E2E2EB",
+                      "surface-container": "#1E1F26",
+                      "surface-container-highest": "#33343B",
+                      "outline": "#8C919C",
+              },
+              "borderRadius": {
+                      "2xl": "16px",
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "display-lg": ["Manrope"],
+                      "headline-lg": ["Manrope"],
+              },
+              "fontSize": {
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+              }
+            },
+          },
+        }
+    </script>
 </head>
 
-<body>
+<body class="bg-background text-on-background font-body-md selection:bg-primary/30">
 
-<!-- HERO -->
-<section class="hero-gradient min-h-screen flex flex-col justify-center items-center text-center px-6">
-    <img src="App-icon.png" alt="Logo MediPlan" class="w-52 h-52 mb-8">
+<main class="pt-8 pb-20 px-4 md:px-lg max-w-7xl mx-auto">
+    <!-- HERO -->
+    <section class="hero-gradient relative py-16 mb-12 rounded-2xl overflow-hidden border border-white/5">
+        <div class="relative z-10 flex flex-col justify-center items-center text-center px-6">
+            <img src="App-icon.png" alt="Logo MediPlan" class="w-32 h-32 md:w-40 md:h-40 mb-8 drop-shadow-2xl">
 
-    <h1 class="text-5xl md:text-6xl font-bold mb-6 text-blue-300">
-        MediPlan
-    </h1>
+            <h1 class="font-display-lg text-4xl md:text-display-lg mb-6 text-primary">
+                MediPlan
+            </h1>
 
-    <p class="text-lg md:text-xl max-w-2xl mb-8 text-gray-300">
-        Inteligentna aplikacja do zarządzania lekami i przypomnieniami.
-        Dbaj o zdrowie bez stresu i zapominania.
-    </p>
-
-    <div class="flex gap-4 flex-wrap justify-center">
-        <a href="#" class="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-xl font-semibold">
-            Pobierz na Android
-        </a>
-
-        <a href="privacy-policy.html" class="border border-gray-500 hover:border-white px-6 py-3 rounded-xl">
-            Polityka prywatności
-        </a>
-    </div>
-</section>
-
-<!-- FEATURES -->
-<section class="py-20 px-6 max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-12">
-        Funkcje aplikacji
-    </h2>
-
-    <div class="grid md:grid-cols-3 gap-8">
-
-        <div class="bg-[#1E1F26] p-6 rounded-2xl">
-            <h3 class="text-xl font-semibold mb-3 text-blue-300">🔔 Przypomnienia</h3>
-            <p class="text-gray-400">
-                Ustaw dokładne godziny przyjmowania leków i nigdy więcej nie zapomnij o dawce.
+            <p class="font-body-lg text-lg md:text-body-lg max-w-2xl mb-10 text-outline">
+                Inteligentna aplikacja do zarządzania lekami i przypomnieniami.
+                Dbaj o zdrowie bez stresu i zapominania.
             </p>
         </div>
+    </section>
 
-        <div class="bg-[#1E1F26] p-6 rounded-2xl">
-            <h3 class="text-xl font-semibold mb-3 text-blue-300">📸 Zdjęcia leków</h3>
-            <p class="text-gray-400">
-                Dodawaj zdjęcia opakowań dla łatwiejszej identyfikacji.
-            </p>
+    <!-- FEATURES -->
+    <section class="py-20 px-6">
+        <h2 class="text-3xl font-headline-lg text-center mb-12">
+            Funkcje aplikacji
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass-card p-8 rounded-2xl">
+                <div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center mb-4">
+                    <span class="material-symbols-outlined text-primary">notifications</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-primary">Przypomnienia</h3>
+                <p class="text-outline">
+                    Ustaw dokładne godziny przyjmowania leków i nigdy więcej nie zapomnij o dawce.
+                </p>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl">
+                <div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center mb-4">
+                    <span class="material-symbols-outlined text-secondary">camera_alt</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-secondary">Zdjęcia leków</h3>
+                <p class="text-outline">
+                    Dodawaj zdjęcia opakowań dla łatwiejszej identyfikacji leków.
+                </p>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl">
+                <div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center mb-4">
+                    <span class="material-symbols-outlined text-outline">lock</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-on-surface">Prywatność</h3>
+                <p class="text-outline">
+                    Wszystkie dane przechowywane są lokalnie – tylko Ty masz do nich dostęp.
+                </p>
+            </div>
         </div>
+    </section>
 
-        <div class="bg-[#1E1F26] p-6 rounded-2xl">
-            <h3 class="text-xl font-semibold mb-3 text-blue-300">🔒 Prywatność</h3>
-            <p class="text-gray-400">
-                Wszystkie dane przechowywane są lokalnie – tylko Ty masz do nich dostęp.
-            </p>
+    <!-- ABOUT -->
+    <section class="py-20 px-6 text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl font-headline-lg mb-6">
+            Dlaczego MediPlan?
+        </h2>
+        <p class="text-outline text-lg">
+            MediPlan został zaprojektowany z myślą o prostocie, bezpieczeństwie i wygodzie.
+            Nie wymaga konta, nie wysyła danych na serwery i działa całkowicie offline.
+        </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 text-center px-6">
+        <h2 class="text-3xl font-headline-lg mb-8">
+            Zacznij dbać o zdrowie już dziś
+        </h2>
+        <div class="flex flex-col items-center gap-6">
+            <a href="#" class="bg-primary text-on-primary hover:bg-white hover:text-black transition-all px-10 py-5 rounded-xl font-bold text-lg inline-flex items-center gap-2">
+                <span class="material-symbols-outlined">rocket_launch</span>
+                Pobierz aplikację
+            </a>
+            <a href="privacy-policy.html" class="glass-card hover:bg-white/5 px-6 py-2 rounded-xl transition-colors text-sm text-outline hover:text-primary">
+                Polityka prywatności
+            </a>
         </div>
-
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section class="py-20 px-6 text-center max-w-3xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6">
-        Dlaczego MediPlan?
-    </h2>
-
-    <p class="text-gray-400 text-lg">
-        MediPlan został zaprojektowany z myślą o prostocie, bezpieczeństwie i wygodzie.
-        Nie wymaga konta, nie wysyła danych na serwery i działa całkowicie offline.
-    </p>
-</section>
-
-<!-- CTA -->
-<section class="py-20 text-center px-6">
-    <h2 class="text-3xl font-bold mb-6">
-        Zacznij dbać o zdrowie już dziś
-    </h2>
-
-    <a href="#" class="bg-blue-600 hover:bg-blue-500 px-8 py-4 rounded-xl font-semibold text-lg">
-        Pobierz aplikację
-    </a>
-</section>
+    </section>
+</main>
 
 <!-- FOOTER -->
-<footer class="border-t border-gray-800 py-10 text-center text-gray-500">
+<footer class="border-t border-white/5 py-12 text-center text-outline bg-surface-container-lowest">
     <p>© 2026 MediPlan</p>
-
     <div class="mt-4">
-        <a href="privacy-policy.html" class="hover:text-white">
+        <a href="privacy-policy.html" class="hover:text-primary transition-colors">
             Polityka prywatności
         </a>
     </div>
