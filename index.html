@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>MediPlan – Inteligentne przypomnienia o lekach</title>
+    <title>AltivoMed – Inteligentne przypomnienia o lekach</title>
 
     <link rel="icon" type="image/png" href="App-icon.png">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -66,14 +66,29 @@
 
 <body class="bg-background text-on-background font-body-md selection:bg-primary/30">
 
-<main class="pt-8 pb-20 px-4 md:px-lg max-w-7xl mx-auto">
+<!-- NAVIGATION -->
+<nav class="sticky top-0 z-50 w-full glass-card border-x-0 border-t-0 py-4 px-6 mb-8">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <img src="App-icon.png" alt="Logo" class="w-8 h-8">
+            <span class="font-display-lg text-xl text-primary">AltivoMed</span>
+        </div>
+        <div class="hidden md:flex gap-8 text-sm font-medium">
+            <a href="#features" class="hover:text-primary transition-colors">Funkcje</a>
+            <a href="#how-it-works" class="hover:text-primary transition-colors">Jak to działa</a>
+            <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+        </div>
+    </div>
+</nav>
+
+<main class="pb-20 px-4 md:px-lg max-w-7xl mx-auto">
     <!-- HERO -->
     <section class="hero-gradient relative py-16 mb-12 rounded-2xl overflow-hidden border border-white/5">
         <div class="relative z-10 flex flex-col justify-center items-center text-center px-6">
-            <img src="App-icon.png" alt="Logo MediPlan" class="w-32 h-32 md:w-40 md:h-40 mb-8 drop-shadow-2xl">
+            <img src="App-icon.png" alt="Logo AltivoMed" class="w-32 h-32 md:w-40 md:h-40 mb-8 drop-shadow-2xl">
 
             <h1 class="font-display-lg text-4xl md:text-display-lg mb-6 text-primary">
-                MediPlan
+                AltivoMed
             </h1>
 
             <p class="font-body-lg text-lg md:text-body-lg max-w-2xl mb-10 text-outline">
@@ -84,7 +99,7 @@
     </section>
 
     <!-- FEATURES -->
-    <section class="py-20 px-6">
+    <section id="features" class="py-20 px-6">
         <h2 class="text-3xl font-headline-lg text-center mb-12">
             Funkcje aplikacji
         </h2>
@@ -125,12 +140,76 @@
     <!-- ABOUT -->
     <section class="py-20 px-6 text-center max-w-3xl mx-auto">
         <h2 class="text-3xl font-headline-lg mb-6">
-            Dlaczego MediPlan?
+            Dlaczego AltivoMed?
         </h2>
         <p class="text-outline text-lg">
-            MediPlan został zaprojektowany z myślą o prostocie, bezpieczeństwie i wygodzie.
+            AltivoMed został zaprojektowany z myślą o prostocie, bezpieczeństwie i wygodzie.
             Nie wymaga konta, nie wysyła danych na serwery i działa całkowicie offline.
         </p>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="py-20 px-6">
+        <h2 class="text-3xl font-headline-lg text-center mb-12">Jak to działa?</h2>
+        <div class="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+            <div class="text-center">
+                <div class="text-5xl font-black text-primary/20 mb-4">01</div>
+                <h4 class="text-xl font-bold mb-2">Dodaj lek</h4>
+                <p class="text-outline">Wpisz nazwę i zrób zdjęcie opakowania.</p>
+            </div>
+            <div class="text-center">
+                <div class="text-5xl font-black text-primary/20 mb-4">02</div>
+                <h4 class="text-xl font-bold mb-2">Ustal plan</h4>
+                <p class="text-outline">Wybierz godziny i dni tygodnia.</p>
+            </div>
+            <div class="text-center">
+                <div class="text-5xl font-black text-primary/20 mb-4">03</div>
+                <h4 class="text-xl font-bold mb-2">Odbierz alert</h4>
+                <p class="text-outline">Dostań powiadomienie dokładnie wtedy, gdy go potrzebujesz.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- APP PREVIEW / SCREENSHOTS -->
+    <section class="py-20 px-6 text-center">
+        <h2 class="text-3xl font-headline-lg mb-12">Zobacz aplikację w akcji</h2>
+        <div class="flex flex-wrap justify-center gap-12">
+            <div class="w-72 aspect-[9/19.5] bg-surface-container rounded-[3rem] border-[12px] border-surface-container-highest overflow-hidden shadow-2xl ring-1 ring-white/10">
+                <img src="Harmonogram.png" alt="Harmonogram AltivoMed" class="w-full h-full block">
+            </div>
+            <div class="w-72 aspect-[9/19.5] bg-surface-container rounded-[3rem] border-[12px] border-surface-container-highest overflow-hidden shadow-2xl ring-1 ring-white/10">
+                <img src="Apteczka.png" alt="Apteczka AltivoMed" class="w-full h-full block">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 px-6 max-w-4xl mx-auto">
+        <h2 class="text-3xl font-headline-lg text-center mb-12">Często zadawane pytania</h2>
+        <div class="space-y-4">
+            <div class="glass-card p-6 rounded-2xl">
+                <h4 class="font-bold text-primary mb-2">Czy aplikacja jest darmowa?</h4>
+                <p class="text-outline">Tak, podstawowe funkcje AltivoMed są całkowicie bezpłatne.</p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl">
+                <h4 class="font-bold text-primary mb-2">Gdzie są moje dane?</h4>
+                <p class="text-outline">Wszystkie dane są zapisywane tylko w pamięci Twojego telefonu. Nie mamy do nich dostępu.</p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl">
+                <h4 class="font-bold text-primary mb-2">Czy aplikacja działa bez internetu?</h4>
+                <p class="text-outline">Tak, po zainstalowaniu AltivoMed nie wymaga połączenia z siecią do działania przypomnień.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="py-20 px-6 text-center">
+        <h2 class="text-2xl font-headline-lg mb-6">Masz pytania?</h2>
+        <p class="text-outline mb-8">Nasz zespół wsparcia jest do Twojej dyspozycji.</p>
+        <a href="mailto:kontakt@altivoapps.pl" class="text-primary font-bold inline-flex items-center gap-2 hover:underline">
+            <span class="material-symbols-outlined">mail</span>
+            kontakt@altivoapps.pl
+        </a>
     </section>
 
     <!-- CTA -->
@@ -151,8 +230,8 @@
 </main>
 
 <!-- FOOTER -->
-<footer class="border-t border-white/5 py-12 text-center text-outline bg-surface-container-lowest">
-    <p>© 2026 MediPlan</p>
+<footer class="border-t border-white/5 py-12 text-center text-outline bg-surface-container-lowest px-6">
+    <p>© 2026 AltivoApps. AltivoMed - Twoje zdrowie pod kontrolą.</p>
     <div class="mt-4">
         <a href="privacy-policy.html" class="hover:text-primary transition-colors">
             Polityka prywatności
